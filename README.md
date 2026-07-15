@@ -2,10 +2,6 @@
 
 A modern, visually stunning Snake game built with pure **HTML**, **CSS**, and **JavaScript**. No frameworks, no dependencies — just clean code and premium aesthetics.
 
-![Snake Game](https://img.shields.io/badge/Game-Snake-06d6a0?style=for-the-badge&logo=javascript&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ---
 
@@ -19,16 +15,13 @@ The game features a polished UI with glassmorphism panels, animated particle eff
 
 ## 📸 Screenshots
 
-<!-- Add your screenshots here -->
+
 <p align="center">
-  <img src="https://via.placeholder.com/600x400/118ab2/ffffff?text=Snake+Game+Gameplay" alt="Gameplay Screenshot 1" width="45%">
-  <img src="https://via.placeholder.com/600x400/7c3aed/ffffff?text=Game+Over+Screen" alt="Game Over Screenshot" width="45%">
-</p>
-<p align="center">
-  <i>(Remplacez les liens des images ci-dessus par les chemins vers vos propres captures d'écran, ex: `assets/screenshot1.png`)</i>
+  <img src="image/A1.png" alt="Gameplay Screenshot 1" width="45%">
+  <img src="image/A2.png" alt="Gameplay Screenshot 1" width="45%">
+  <img src="image/A3.png" alt="Gameplay Screenshot 1" width="45%">
 </p>
 
----
 
 ## ✨ Features
 
