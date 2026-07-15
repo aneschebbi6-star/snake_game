@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Snake Game — Un jeu de serpent moderne avec des graphismes premium et des animations fluides.">
+    <title>🐍 Snake — Le Jeu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background particles -->
+    <canvas id="bgCanvas"></canvas>
+
+    <div class="game-wrapper">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="logo">
+                <span class="logo-icon">🐍</span>
+                <h1>SNAKE</h1>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-item" id="scoreDisplay">
+                    <span class="stat-label">SCORE</span>
+                    <span class="stat-value" id="score">0</span>
+                </div>
+                <div class="stat-item" id="highScoreDisplay">
+                    <span class="stat-label">MEILLEUR</span>
+                    <span class="stat-value" id="highScore">0</span>
+                </div>
+                <div class="stat-item" id="lengthDisplay">
+                    <span class="stat-label">LONGUEUR</span>
+                    <span class="stat-value" id="snakeLength">3</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Game Container -->
+        <div class="game-container">
+            <div class="game-border">
+                <div class="corner-decor top-left"></div>
+                <div class="corner-decor top-right"></div>
+                <div class="corner-decor bottom-left"></div>
+                <div class="corner-decor bottom-right"></div>
+                <canvas id="gameCanvas"></canvas>
+            </div>
+        </div>
+
+        <!-- Controls hint -->
+        <div class="controls-hint">
+            <div class="key-group">
+                <div class="key">▲</div>
+                <div class="key-row">
+                    <div class="key">◄</div>
+                    <div class="key">▼</div>
+                    <div class="key">►</div>
+                </div>
+            </div>
+            <span class="hint-text">Utilisez les flèches pour diriger le serpent</span>
+        </div>
+
+        <!-- Start Overlay -->
+        <div class="overlay" id="startOverlay">
+            <div class="overlay-content start-content">
+                <div class="snake-art">🐍</div>
+                <h2>SNAKE</h2>
+                <p class="subtitle">Mangez les fruits, grandissez, survivez !</p>
+                <div class="rules">
+                    <div class="rule">
+                        <span class="rule-icon">🍎</span>
+                        <span>Mangez les fruits pour grandir</span>
+                    </div>
+                    <div class="rule">
+                        <span class="rule-icon">💀</span>
+                        <span>Évitez les murs et votre propre corps</span>
+                    </div>
+                    <div class="rule">
+                        <span class="rule-icon">⚡</span>
+                        <span>La vitesse augmente avec le score</span>
+                    </div>
+                </div>
+                <button class="btn-play" id="btnStart">
+                    <span class="btn-text">JOUER</span>
+                    <span class="btn-glow"></span>
+                </button>
+                <p class="press-hint">ou appuyez sur <kbd>Espace</kbd></p>
+            </div>
+        </div>
+
+        <!-- Game Over Overlay -->
+        <div class="overlay hidden" id="gameOverOverlay">
+            <div class="overlay-content gameover-content">
+                <div class="gameover-icon">💀</div>
+                <h2>GAME OVER</h2>
+                <div class="final-stats">
+                    <div class="final-stat">
+                        <span class="final-label">Score Final</span>
+                        <span class="final-value" id="finalScore">0</span>
+                    </div>
+                    <div class="final-stat">
+                        <span class="final-label">Meilleur Score</span>
+                        <span class="final-value" id="finalHighScore">0</span>
+                    </div>
+                    <div class="final-stat">
+                        <span class="final-label">Longueur</span>
+                        <span class="final-value" id="finalLength">0</span>
+                    </div>
+                </div>
+                <div class="new-record hidden" id="newRecord">
+                    <span>🏆 NOUVEAU RECORD ! 🏆</span>
+                </div>
+                <button class="btn-play" id="btnRestart">
+                    <span class="btn-text">REJOUER</span>
+                    <span class="btn-glow"></span>
+                </button>
+                <p class="press-hint">ou appuyez sur <kbd>Espace</kbd></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
